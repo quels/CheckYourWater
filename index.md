@@ -1,37 +1,104 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
 
-You can use the [editor on GitHub](https://github.com/quels/CheckYourWater/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+    <style media="screen">
+    .alert {
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+position: fixed;
+left: 23%;
+top: 77%;
 
-### Markdown
+    }
+.Logo {
+background-color: #e6ecff;
+width: 1355px;
+height: 60px;
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+}
+    .LogoT {
+font-family: 'Supermercado One', cursive;
+font-size: 40px;
 
-```markdown
-Syntax highlighted code block
+    }
+body {
+  background-image: url("http://dullahansoft.com/pixel/wp-content/uploads/2015/03/water.png");
+}
+    .info {
+      background-color: white;
+    position: fixed;
+    top: 35%;
+    left: 10%;
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+    }
+    table, th, td {
+        border: 3px solid black;
+        font-size: 48px ;
+        font-family: 'Philosopher', sans-serif;
 
-**Bold** and _Italic_ and `Code` text
+    }
+    .updateb {
+      font-size: 30px;
+      position: fixed;
+      left:15%;
+      top:77%;
+      color: green;
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+    }
+    </style>
+  <link rel="stylesheet" type="text/css" href="Style_home.css">
+<script type="text/javascript" href="script.js">
 
-### Jekyll Themes
+</script>
+    <title>Check Your Water</title>
+  </head>
+  <body background="background.png">
+<center>
+    <div class="Logo">
+    <h1 class = "LogoT">Check Your Water ☻</h1>
+    </div>
+  </center>
+    <div class="info">
+      <button class="updateb" type="button" onclick="update()">Update</button>
+      <table>
+  <tr>
+    <th>Parameter</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>TSS</td>
+    <td id=Tss></td>
+  </tr>
+  <tr>
+    <td>pH</td>
+    <td id=pH></td>
+  </tr>
+  <tr>
+    <td>Ec</td>
+    <td id=Ec></td>
+  </tr>
+</table>
+    </div>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/quels/CheckYourWater/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+<script type="text/javascript">
+function update() {
+var pH = Math.floor((Math.random() * 10) + 3);
+document.getElementById("pH").innerHTML = pH + ("(mol/L)");
 
-### Support or Contact
+var Ec = Math.floor((Math.random() * 4) + 1);
+document.getElementById("Ec").innerHTML = Ec + (" (mS)");
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+var Tss = Math.floor((Math.random() * 100) + 300);
+document.getElementById("Tss").innerHTML = Tss + (" (mg/L)");
+}
+
+</script>
+  </body>
+</html>
