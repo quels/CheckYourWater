@@ -16,14 +16,19 @@ top: 77%;
     }
 .Logo {
 background-color: #e6ecff;
-width: 1355px;
+width: 500px;
 height: 60px;
+position: fixed;
+left:0%;
+top: 3%;
 
 }
     .LogoT {
 font-family: 'Supermercado One', cursive;
 font-size: 40px;
-
+position: fixed;
+left:80px;
+top:0px;
     }
 body {
   background-image: url("http://dullahansoft.com/pixel/wp-content/uploads/2015/03/water.png");
@@ -31,8 +36,8 @@ body {
     .info {
       background-color: white;
     position: fixed;
-    top: 35%;
-    left: 10%;
+    top: 20%;
+    left: 2%;
 
 
 
@@ -46,8 +51,8 @@ body {
     .updateb {
       font-size: 30px;
       position: fixed;
-      left:15%;
-      top:77%;
+      left:12%;
+      top:64%;
       color: green;
 
 
@@ -59,12 +64,11 @@ body {
 </script>
     <title>Check Your Water</title>
   </head>
+  <button type="button" onclick="error()" name="button">test</button>
   <body background="background.png">
-<center>
     <div class="Logo">
     <h1 class = "LogoT">Check Your Water ☻</h1>
     </div>
-  </center>
     <div class="info">
       <button class="updateb" type="button" onclick="update()">Update</button>
       <table>
@@ -97,8 +101,17 @@ document.getElementById("Ec").innerHTML = Ec + (" (mS)");
 
 var Tss = Math.floor((Math.random() * 100) + 300);
 document.getElementById("Tss").innerHTML = Tss + (" (mg/L)");
-}
 
+    var x = document.createElement("OBJECT");
+    x.setAttribute("data", "ex_mid.png");
+    x.setAttribute("id", "myObject");
+    document.body.appendChild(x);
+
+    var y = document.createElement("PARAM");
+    y.setAttribute("name", "autoplay");
+    y.setAttribute("value", "true");
+    document.getElementById("myObject").appendChild(y);
+}
 </script>
   </body>
 </html>
