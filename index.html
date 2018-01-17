@@ -52,7 +52,7 @@ body {
       font-size: 30px;
       position: fixed;
       left:12%;
-      top:85%;
+      top:70%;
       color: green;
 
 
@@ -64,7 +64,6 @@ body {
 </script>
     <title>Check Your Water</title>
   </head>
-  <button type="button" onclick="error()" name="button">test</button>
   <body background="background.png">
     <div class="Logo">
     <h1 class = "LogoT">Check Your Water ☻</h1>
@@ -101,16 +100,6 @@ document.getElementById("Ec").innerHTML = Ec + (" (mS)");
 
 var Tss = Math.floor((Math.random() * 100) + 300);
 document.getElementById("Tss").innerHTML = Tss + (" (mg/L)");
-
-    var x = document.createElement("OBJECT");
-    x.setAttribute("data", "ex_mid.png");
-    x.setAttribute("id", "myObject");
-    document.body.appendChild(x);
-
-    var y = document.createElement("PARAM");
-    y.setAttribute("name", "autoplay");
-    y.setAttribute("value", "true");
-    document.getElementById("myObject").appendChild(y);
 }
 </script>
   </body>
