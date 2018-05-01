@@ -7,7 +7,38 @@
     <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
 
     <style media="screen">
-    .alert {
+        .menu {
+            position:  relative;
+            top: 130px;
+        }
+        .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #111;
+}      
+        .page{
+            width: 960px;
+            margin: 0 auto;
+        }
+        .alert {
 
 position: fixed;
 left: 23%;
@@ -56,7 +87,7 @@ body {
 
 position: fixed;
 left:600px;
-top:100px;
+top:200px;
 
     }
     </style>
@@ -67,7 +98,16 @@ top:100px;
     <title>Check Your Water</title>
   </head>
   <body background="background.png">
-    <div class="video">
+      <div class="page">
+    <div class="menu">
+<ul>
+  <li><a class="active" href="#home">ראשי</a></li>
+  <li><a href="#news">קצת עלינו</a></li>
+  <li><a href="#about">על המוצר</a></li>
+  <li><a href="#">תמונות</a></li>
+</ul>
+          </div>
+          <div class="video">
       <iframe width="640" height="360" src="https://www.youtube.com/embed/udEICbpphFA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
@@ -110,6 +150,9 @@ var Tss = Math.floor((Math.random() * 100) + 300);
 document.getElementById("Tss").innerHTML = Tss + (" (mg/L)");
 }
 
-</script>
-  </body>
+
+          </script>
+      </div>
+          </body>
+      
 </html>
