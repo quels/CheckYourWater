@@ -12,7 +12,8 @@
             top: 130px;
         }
         .menu ul {
-    list-style-type: none;
+   width: 1355px;
+            list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -45,6 +46,12 @@ left: 23%;
 top: 77%;
 
     }
+.header {
+        position: relative;
+        left: -300px;
+  
+            
+        }
 .Logo {
 background-color: #e6ecff;
 width: 1355px;
@@ -86,7 +93,7 @@ body {
     .video {
 
 position: fixed;
-left:600px;
+left:650px;
 top:200px;
 
     }
@@ -99,7 +106,8 @@ top:200px;
   </head>
   <body background="background.png">
       <div class="page">
-    <div class="menu">
+    <div class="header">
+          <div class="menu">
 <ul>
   <li><a class="active" href="#home">ראשי</a></li>
   <li><a href="#news">קצת עלינו</a></li>
@@ -107,15 +115,14 @@ top:200px;
   <li><a href="#">תמונות</a></li>
 </ul>
           </div>
-          <div class="video">
-      <iframe width="640" height="360" src="https://www.youtube.com/embed/udEICbpphFA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-
-<center>
     <div class="Logo">
     <h1 class = "LogoT">Check Your Water ☻</h1>
     </div>
-  </center>
+          </div>
+                  <div class="video">
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/udEICbpphFA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
     <div class="info">
       <button class="updateb" type="button" onclick="update()">Update</button>
       <table>
